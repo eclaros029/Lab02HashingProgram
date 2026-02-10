@@ -72,7 +72,7 @@ def validate_hashes():
         
         for old_path in missing_files:
             if stored_hashes[old_path] == new_hash:
-                print(f"[rename detected] {old_path} -> {new_path}")
+                print(f"File name change detected, {old_path} has been renamed to {new_path}.")
                 
                 stored_hashes[new_path] = stored_hashes.pop(old_path)
                 
